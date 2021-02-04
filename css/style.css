@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap');
+
+/* ---------------- Base style -------------*/
+
+
+* {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+h1,
+h2,
+h2 ~ p,
+span,
+footer {
+    text-align: center;
+}
+
+body {
+    flex: 1 0 340px;
+    background-color: rgb(252, 252, 252);
+}
+
+body,
+main,
+form,
+.contact-info > div,
+.textarea {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    min-height: 100vh;
+    margin: 2.5em auto;
+    width: 90%;
+}
+
+#zip {
+    align-self: flex-start;
+}
+
+footer {
+    padding: 1em;
+}
+
+/* ----------------------------------- */
+
+h1,
+h2,
+legend {
+    font-family: 'Oxygen', sans-serif;
+    letter-spacing: 1px;
+}
+
+h1 {
+    background-color: rgb(153, 174, 218);
+    color: white;
+    padding: 1em;
+    text-transform: uppercase;
+}
+
+
+h2, 
+h2 ~ p{
+    padding: 0.5em;
+}
+
+h2 ~ p {
+    padding-bottom: 2em;
+    border-bottom: 6px double black;
+}
+
+
+legend {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+fieldset {
+    margin-top: 2em;
+    border: none;
+    padding: 0;
+}
+
+input,
+select,
+textarea,
+button {
+    border-radius: 5px;
+}
+
+label,
+select,
+h2 ~ p {
+    color: rgb(92, 92, 92);
+}
+
+.contact-info > div {
+    margin-top: 1.5em;
+}
+
+.contact-info > div > input,
+select {
+    margin-top: 0.5em;
+}
+
+.zip-code {
+    padding-bottom: 2em;
+    border-bottom: 2px solid black;
+}
+
+
+.newsletter {
+    margin-top: 2em;
+}
+
+.newsletter > div {
+    margin-top: 0.7em;
+}
+
+
+.newsletter p {
+    margin-top: 2em;
+    color: rgb(92, 92, 92);;
+}
+
+.newsletter label {
+    margin-left: 1em;
+}
+
+
+.textarea > label {
+    margin: 2em 0 1em 0;
+}
+
+textarea {
+    height: 5em;
+    background-color: rgb(237, 237, 237);
+    border: none;
+    resize: none;
+    padding: 0.4em;
+}
+
+button {
+    padding: 1em;
+    margin-top: 1em;
+    background-color: rgb(165, 248, 198);
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    border: none;
+}
+
+input,
+select {
+    border: none;
+    padding: 0.5em;
+    background-color: rgb(241, 239, 239);
+    color: rgb(92, 92, 92);
+}
+
+::placeholder {
+    text-align: right;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline:none;
+    box-shadow: 0px 0px 12px rgb(134, 134, 134) ;
+    background-color: white;
+    transition: all 0.5s ease;
+}
+
+button:focus {
+    outline:none;
+    box-shadow: 0px 0px 12px rgb(85, 85, 85) ;
+    background-color: rgb(124, 189, 150);
+    transition: all 0.5s ease;
+}
+
+
+/* ------------------------------- */
+
+
+
+@media(min-width:768px) {
+
+    main {
+        width: 55%;
+        max-width: 600px;
+    }
+
+    .contact-info > div > input,
+    select {
+        margin-top:0;
+    }
+
+    .contact-info > div {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .contact-info label {
+        flex-basis: 30%;
+        padding: 0;
+    }
+
+    .contact-info input,
+    #state {
+        flex-grow: 1;
+        margin-top: 0;
+    }
+
+    #zip {
+        flex-grow: 0;
+    }
+
+
+}
